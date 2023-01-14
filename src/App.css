@@ -1,3 +1,13 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap'); */
+*{
+  box-sizing: border-box;
+}
+/* body{
+  font-family: 'Roboto', sans-serif;
+
+} */
+
 .App {
   text-align: center;
 }
@@ -7,32 +17,74 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: #FAFBFB;
+  /* overflow: hidden; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* ******************************************* */
+
+.settings{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  font-size: 2rem;
+}
+
+.settings button{
+  width: 4rem;
+  height: 4rem;
+  font-size: 3rem;
+  padding-top: 5px;
+  /* background-color: white; */
+  border-radius: 50%;
+  background-color: blue;
   color: white;
+  cursor: pointer;
+
 }
 
-.App-link {
-  color: #61dafb;
+.main-margin{
+  
+  width: 100%;
+  margin-left: 20rem;
+}
+.main-withoutMargin{
+  
+  width: 100%;
+}
+.elements{
+  margin:3rem 2rem 0 5rem;
+  padding: 3rem;
+  /* background-color: white; */
+
+}
+.elements-withoutMargin{
+  margin: 3rem 0 0 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-sidebar{
+  position: fixed;
+  z-index: 100;
+}
+/* ***************************************** */
+
+@media screen and (max-width: 680px) {
+  .elements{
+    margin: 3rem 0 0 0.5rem;
+    padding: 0.1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .app-sidebar{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
   }
+  .main-margin{
+  
+    width: 100%;
+    margin-left: 0rem;
+  }
+
 }
